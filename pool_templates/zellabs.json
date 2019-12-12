@@ -1,0 +1,154 @@
+[
+    {
+        "coin": "ZEL",
+        "servers": [
+            {
+                "geo": "US",
+                "urls": [
+                    "us-zel.zellabs.net:2001"
+                ]
+            },
+            {
+                "geo": "US-2",
+                "urls": [
+                    "us-zel.zellabs.net:7001"
+                ]
+            },
+            {
+                "geo": "US-HIGHDIFF",
+                "urls": [
+                    "us-zel.zellabs.net:7111"
+                ]
+            },
+            {
+                "geo": "EU",
+                "urls": [
+                    "eu-zel.zellabs.net:7011"
+                ]
+            }
+        ],
+        "lolminer": {
+            "algo": "ZEL",
+            "template": "%WAL%.%WORKER_NAME%",
+            "server": "%URL_HOST%",
+            "port": "%URL_PORT%",
+            "pass": "x"
+        },
+        "gminer": {
+            "algo": "125_4",
+            "server": "%URL_HOST%",
+            "port": "%URL_PORT%",
+            "pass": "x",
+            "template": "%WAL%.%WORKER_NAME%",
+            "user_config": "--pers ZelProof"
+        },
+        "miniz": {
+            "algo": "125,4",
+            "template": "%WAL%.%WORKER_NAME%",
+            "url": "%URL%",
+            "pass": "x"
+        }
+    },
+    {
+        "coin": "RVN",
+        "servers": [
+            {
+                "geo": "US",
+                "urls": [
+                    "us-rvn.zellabs.net:7008"
+                ]
+            }
+        ],
+        "miners": {
+            "sgminer-gm": {
+                "url": "stratum+tcp:\/\/%URL%",
+                "algo": "x16rv2",
+                "pass": "x",
+                "template": "%WAL%.%WORKER_NAME%",
+                "user_config": "\"rawintensity\" : \"5120\"\n\"worksize\" : \"256\"\n\"lookup-gap\" : \"2\"\n\"thread-concurrency\" : \"8192\"\n\"shaders\" : \"0\"\n\"gpu-threads\" : \"2\""
+            },
+            "ccminer": {
+                "ccurl": "stratum+tcp:\/\/%URL%",
+                "ccalgo": "x16rv2",
+                "ccpass": "x",
+                "ccuser": "%WAL%.%WORKER_NAME%"
+            },
+            "cryptodredge": {
+                "url": "stratum+tcp:\/\/%URL%",
+                "algo": "x16rv2",
+                "pass": "x",
+                "template": "%WAL%.%WORKER_NAME%"
+            },
+            "t-rex": {
+                "url": "stratum+tcp:\/\/%URL%",
+                "algo": "x16rv2",
+                "pass": "x",
+                "template": "%WAL%.%WORKER_NAME%"
+            },
+            "teamredminer": {
+                "url": "stratum+tcp:\/\/%URL%",
+                "algo": "x16rv2",
+                "pass": "x",
+                "template": "%WAL%.%WORKER_NAME%"
+            },
+            "wildrig-multi": {
+                "url": "stratum+tcp:\/\/%URL%",
+                "algo": "x16rv2",
+                "pass": "x",
+                "template": "%WAL%.%WORKER_NAME%",
+                "user_config": "\"opencl-threads\" : \"2\""
+            }
+        }
+    },
+    {
+        "coin": "XZC",
+        "servers": [
+            {
+                "geo": "US-1",
+                "urls": [
+                    "us-zcoin.zellabs.net:7014"
+                ]
+            },
+            {
+                "geo": "US-2",
+                "urls": [
+                    "us-zcoin.zellabs.net:7015"
+                ]
+            },
+            {
+                "geo": "US-HIGHDIFF",
+                "urls": [
+                    "us-zcoin.zellabs.net:7016"
+                ]
+            }
+        ],
+        "miners": {
+            "t-rex": {
+                "url": "stratum+tcp://%URL%",
+                "algo": "mtp",
+                "pass": "x",
+                "template": "%WAL%.%WORKER_NAME%"
+            },
+            "cryptodredge": {
+                "url": "%URL%",
+                "pass": "x",
+                "template": "%WAL%.%WORKER_NAME%",
+                "algo": "mtp"
+            },
+            "ccminer": {
+                "ccalgo": "mtp",
+                "fork": "djm34",
+                "ccurl": "stratum+tcp://%URL%",
+                "ccuser": "%WAL%.%WORKER_NAME%",
+                "ccpass": "x"
+            },
+            "ccminer": {
+                "ccalgo": "mtp",
+                "fork": "mtp",
+                "ccurl": "stratum+tcp://%URL%",
+                "ccuser": "%WAL%.%WORKER_NAME%",
+                "ccpass": "x"
+            }
+        }
+    }
+]
